@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.Signup.Signup_ID_Activity"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/ly_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/img_arrowback"></Button>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"></View>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_PhoneOrEmail"
+        android:layout_below="@+id/ly_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화번호 또는 이메일 주소 입력"
+        android:textSize="26dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorBlack"></TextView>
+
+    <LinearLayout
+        android:id="@+id/ly_PhoneOrEmail"
+        android:layout_below="@+id/tv_PhoneOrEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="전화번호"
+            android:textSize="23dp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center_horizontal"></TextView>
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="이메일"
+            android:textSize="23dp"
+            android:textColor="@color/colorGray"
+            android:gravity="center_horizontal"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_underBar"
+        android:layout_below="@+id/ly_PhoneOrEmail"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/phone_underBar"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorBlack"></View>
+        <View
+            android:id="@+id/email_underBar"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorGray"></View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_phone"
+        android:visibility="visible"
+        android:layout_below="@id/ly_underBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/et_shape"
+        android:layout_margin="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="KR +82"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textColor="@color/colorBlue"
+            android:textSize="16dp"></TextView>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/colorLightGray"></View>
+        <EditText
+            android:id="@+id/et_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="휴대폰"
+            android:textSize="16dp"
+            android:background="@android:color/transparent"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_email"
+        android:visibility="invisible"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/ly_underBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/et_shape"
+        android:layout_margin="20dp">
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="이메일"
+            android:textSize="16dp"
+            android:background="@android:color/transparent"></EditText>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/ly_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_phone">
+        <Button
+        android:id="@+id/btn_enable_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="16dp"
+        android:text="다음"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_enable_shape"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"></Button>
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16dp"
+            android:text="다음"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_shape"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"></Button>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_phone_notice"
+        android:visibility="visible"
+        android:layout_below="@+id/ly_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorGray"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/phone_notice"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorGray"
+            android:layout_marginTop="100dp"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미 계정이 있으신가요?"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorGray"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 로그인"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

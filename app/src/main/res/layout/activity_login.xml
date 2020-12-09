@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    tools:context=".src.Login.SignInActivity">
+
+    <ImageView
+        android:id="@+id/instagramTitle"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/ly_signIn"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/img_maintitle"></ImageView>
+    <LinearLayout
+        android:id="@+id/ly_signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/et_userID"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="전화번호, 이메일 주소 또는 사용자 이름"
+            android:textColor="@color/colorGray"
+            android:background="@drawable/et_shape"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"
+            android:layout_marginRight="30dp"></EditText>
+        <EditText
+            android:id="@+id/et_userPW"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:hint="비밀번호"
+            android:textSize="15dp"
+            android:inputType="textPassword"
+            android:textColor="@color/colorGray"
+            android:background="@drawable/et_shape"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"></EditText>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:onClick="customOnClick"
+                android:id="@+id/btn_enable_login"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:background="@drawable/btn_enable_shape"
+                android:text="로그인"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="30dp"></Button>
+
+            <Button
+                android:visibility="invisible"
+                android:onClick="customOnClick"
+                android:id="@+id/btn_login"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:background="@drawable/btn_shape"
+                android:text="로그인"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="30dp"></Button>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_marginLeft="30dp"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorLightGray"></View>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="또는"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="@color/colorGray"></TextView>
+            <View
+                android:layout_marginRight="30dp"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorLightGray"></View>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_facebookLogin"
+            android:onClick="customOnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook으로 로그인"
+            android:textSize="18dp"
+            android:drawableLeft="@drawable/img_facebookicon"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorBlue"
+            android:textStyle="bold"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorGray"
+            android:layout_marginTop="180dp"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="계정이 없으신가요? "
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorGray"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:textSize="13dp"
+                android:id="@+id/tv_signup"
+                android:onClick="customOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 가입하기."
+                android:textColor="@color/colorNavy"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+
+        
+    </LinearLayout>
+
+</RelativeLayout>

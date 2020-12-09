@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:id="@+id/TitleBar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:padding="3dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/icon_camera"></ImageView>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:src="@drawable/icon_maintitle"></ImageView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"></View>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/icon_dm"></ImageView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/TitleBar_line"
+        android:layout_below="@+id/TitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLightGray">
+    </View>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_feed"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="5dp"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TitleBar_line"></androidx.recyclerview.widget.RecyclerView>
+
+    
+</RelativeLayout>

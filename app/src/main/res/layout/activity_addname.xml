@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_addname"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이름 추가"
+        android:textSize="26dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorBlack"></TextView>
+    <TextView
+        android:id="@+id/tv_addname_notice"
+        android:layout_below="@+id/tv_addname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addname_notice"
+        android:gravity="center"
+        android:textColor="@color/colorGray"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"></TextView>
+    <LinearLayout
+        android:id="@+id/ly_name"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/tv_addname_notice"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/et_shape"
+        android:layout_margin="20dp">
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="이름"
+            android:textSize="16dp"
+            android:background="@android:color/transparent"></EditText>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/ly_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_enable_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16dp"
+            android:text="다음"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_enable_shape"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"></Button>
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16dp"
+            android:text="다음"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_shape"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"></Button>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorGray"
+            android:layout_marginTop="100dp"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미 계정이 있으신가요?"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorGray"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 로그인"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -27,7 +27,7 @@
 
 #### 3. 본인의 account page
 
-![ezgif com-gif-maker (15)](https://user-images.githubusercontent.com/53509789/101726575-2611d200-3af6-11eb-8b94-dac216e14266.gif)
+![ezgif com-gif-maker (17)](https://user-images.githubusercontent.com/53509789/101726886-bbad6180-3af6-11eb-88eb-96faf7022aee.gif)
 - 가입시 설정한 프로필 정보 출력
 - 프로필에 지정한 웹사이트 클릭시 바로 연결
 - 프로필 정보 편집

@@ -1,5 +1,4 @@
-## 안드로이드 인스타그램 클론
-- This is android instagram clone project.
+## 안드로이드 인스타그램 클론 프로젝트
 
 ### 주요기능
 
